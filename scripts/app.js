@@ -19,10 +19,20 @@ $(document).ready(function() {
 		});
 	}
 
-
-	$(this).gShake(function() {
-		shame();
+	var myShakeEvent = new Shake({
+    	threshold: 15, // optional shake strength threshold
+    	timeout: 1000 // optional, determines the frequency of event generation
 	});
+
+	myShakeEvent.start();
+
+	window.addEventListener('shake', shakeEventDidOccur, false);
+
+	function shakeEventDidOccur () {
+
+    	//put your own code here etc.
+    	shame();
+	}
 
 	function shame() {
 		$('.audioDemo').prop("currentTime",0);
