@@ -9,7 +9,9 @@ $(document).ready(function() {
 		setTimeout(function() {
 			$('.shakey').addClass('shakey-show');
 		},200);
-		$('.shakelabel').addClass('show');
+		setTimeout(function() {
+			$('.shakelabel').addClass('show');
+		},250);
 		$('.start-button').addClass('shame-transform');
 		$('.audioDemo').trigger('play').trigger('pause');
 		$('.start-button').click(function() {
@@ -30,3 +32,4 @@ $(document).ready(function() {
 		}, 2000);
 	}
 });
+

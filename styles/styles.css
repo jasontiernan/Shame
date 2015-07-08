@@ -33,10 +33,6 @@ body {
 	z-index: 100;
 }
 
-.show {
-	display: block;
-}
-
 .start-button {
 	color: rgba(255,255,255,.8);
 	width: 460px;
@@ -60,15 +56,17 @@ body {
 
 .shakelabel {
 	font-family: GoT;
+	font-size: 1.5em;
 	letter-spacing: 4px;
-	display: none; 
+	display: none;
+	opacity: 0; 
 	color: black;
-	margin-top: 44%;
+	margin-top: 45%;
 	text-align: center;
 	text-transform: uppercase;
+	-webkit-transition: all 1s ease-in-out;
+	transition: all 1s ease-in-out;
 }
-
-
 
 .start-button:hover {
 	background-color: white;
@@ -125,8 +123,6 @@ body {
 	transition: all 1s ease-in-out;	
 }
 
-.shakey-show { display: none; opacity: 1; }
-
 .shakey-fadein {
 	display: block;
 	opacity: 1;
@@ -138,9 +134,18 @@ body {
 
 }
 
+.shakelabel.show { display: block; opacity: 1; }
+
+.shakey.shakey-show { display: none; opacity: 1; }
+
+
 .show-button {
 	display: block;
 }
+
+.start-button.shame-transform:active {
+	-webkit-transform: scale(.90,.90);
+	transform: scale(.90,.90);
 
 /*Ringing Animation */
 
