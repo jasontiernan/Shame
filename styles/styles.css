@@ -8,8 +8,8 @@
 body {
 	background: 
 		linear-gradient(
-      rgba(1, 1, 1, 0.8), 
-      rgba(1, 1, 1, 0.8)
+      rgba(1, 1, 1, 0.7), 
+      rgba(1, 1, 1, 0.7)
     ),
 	url('../images/ShameBG.gif') no-repeat center center fixed;
 	background-size: cover;
@@ -23,14 +23,18 @@ body {
 	height: 100%;
 	background: 
 		linear-gradient(
-      rgba(1, 1, 1, 0.8), 
-      rgba(1, 1, 1, 0.8)
+      rgba(1, 1, 1, 0.7), 
+      rgba(1, 1, 1, 0.7)
     ),
 	url('../images/Sparrow.jpg') no-repeat center center fixed;
 	background-size: cover;
 	-webkit-transition: all 1s ease-in-out;
 	transition: all 1s ease-in-out;
 	z-index: 100;
+}
+
+.show {
+	display: block;
 }
 
 .start-button {
@@ -53,6 +57,18 @@ body {
   	-webkit-transition: all .25s ease-in-out;
 	transition: all .25s ease-in-out;
 }
+
+.shakelabel {
+	font-family: GoT;
+	letter-spacing: 4px;
+	display: none; 
+	color: black;
+	margin-top: 44%;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+
 
 .start-button:hover {
 	background-color: white;
@@ -94,11 +110,8 @@ body {
 	display: block;
 }
 
-.bell {
-	width: 152px;
-	background: url('../images/Shame.svg') no-repeat;
-	height: 114px;
-	margin: 30px auto 0 auto;	
+.shakey {
+	display: none;
 }
 
 .shakey {
@@ -111,6 +124,8 @@ body {
 	-webkit-transition: all 1s ease-in-out;
 	transition: all 1s ease-in-out;	
 }
+
+.shakey-show { display: none; opacity: 1; }
 
 .shakey-fadein {
 	display: block;
@@ -215,5 +230,9 @@ body {
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 568px) {
 	.start-button { width: 240px; top: 30%; font-size: .7em; line-height: 150%; margin-left: -120px; }
+	.start-button p { padding: 0 30px 0 30px; }
 	.shame-transform { width: 240px; height: 240px; top: 20%; }
+	.shakelabel { display: none; }
+	.shakey-show { display: block; }
+
 }

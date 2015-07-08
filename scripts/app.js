@@ -6,7 +6,10 @@ $(document).ready(function() {
 
 	function intro() {
 		$('.intro').css('opacity','0');
-		$('.shakey').css('opacity','1');
+		setTimeout(function() {
+			$('.shakey').addClass('shakey-show');
+		},200);
+		$('.shakelabel').addClass('show');
 		$('.start-button').addClass('shame-transform');
 		$('.audioDemo').trigger('play').trigger('pause');
 		$('.start-button').click(function() {
