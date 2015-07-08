@@ -42,16 +42,16 @@ body {
 	text-align: center;
 	font-family: GoT;
 	letter-spacing: 2px; 
-	-webkit-transition: all .25s ease-in-out;
-	transition: all .25s ease-in-out;
-
 	cursor: pointer;
 	margin-left: -230px;
 	left: 50%;
 	border: 1px solid rgba(255,255,255,.5);
+	box-sizing: border-box;
   	padding: 30px 0 30px 0;
   	border-radius: 60px;
   	z-index: 1000;
+  	-webkit-transition: all .25s ease-in-out;
+	transition: all .25s ease-in-out;
 }
 
 .start-button:hover {
