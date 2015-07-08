@@ -25,6 +25,7 @@ $(document).ready(function() {
 	});
 
 	function shame() {
+		$('.audioDemo').prop("currentTime",0);
 		$('.shakey').addClass('ring');
 		$('.audioDemo').trigger('play');
 		setTimeout(function() {
